@@ -106,10 +106,21 @@
     "sha256": "a2f82242ac5e465037cbf1ed754f04f0be044ee196e1589905f9e4dcd0e6559d"
   },
   {
+    "name": "phi-2",
+    "license_name": "MIT",
+    "license_url": "https://huggingface.co/microsoft/phi-2/blob/main/LICENSE",
+    "chat_template": "<s>{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '[INST] ' + message['content'] + ' [/INST]' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '</s> ' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
+    "provider_url": "https://huggingface.co/microsoft/phi-2",
+    "urls": [
+      "https://huggingface.co/TheBloke/phi-2-GGUF/resolve/main/phi-2.Q8_0.gguf?download=true"
+    ],
+    "sha256": "26a44c5a2bc22f33a1271cdf1accb689028141a6cb12e97671740a9803d23c63"
+  },
+  {
     "name": "phi-2-dpo",
     "license_name": "MIT",
     "license_url": "https://huggingface.co/microsoft/phi-2/blob/main/LICENSE",
-    "prompt_template": "### Human: {prefix}\n\n### Assistant:{suffix}",
+    "chat_template": "<s>{% for message in messages %}{% if (message['role'] == 'user') != (loop.index0 % 2 == 0) %}{{ raise_exception('Conversation roles must alternate user/assistant/user/assistant/...') }}{% endif %}{% if message['role'] == 'user' %}{{ '[INST] ' + message['content'] + ' [/INST]' }}{% elif message['role'] == 'assistant' %}{{ message['content'] + '</s> ' }}{% else %}{{ raise_exception('Only user and assistant roles are supported!') }}{% endif %}{% endfor %}",
     "provider_url": "https://huggingface.co/lxuechen/phi-2-dpo",
     "urls": [
       "https://huggingface.co/TheBloke/phi-2-dpo-GGUF/resolve/main/phi-2-dpo.Q8_0.gguf"
