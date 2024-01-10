@@ -104,5 +104,16 @@
       "https://huggingface.co/TheBloke/deepseek-coder-6.7B-base-GGUF/resolve/main/deepseek-coder-6.7b-base.Q8_0.gguf"
     ],
     "sha256": "a2f82242ac5e465037cbf1ed754f04f0be044ee196e1589905f9e4dcd0e6559d"
+  },
+  {
+    "name": "phi-2-dpo",
+    "license_name": "MIT",
+    "license_url": "https://huggingface.co/microsoft/phi-2/blob/main/LICENSE",
+    "prompt_template": "### Human: {prefix}\n\n### Assistant:{suffix}",
+    "provider_url": "https://huggingface.co/lxuechen/phi-2-dpo",
+    "urls": [
+      "https://huggingface.co/TheBloke/phi-2-dpo-GGUF/resolve/main/phi-2-dpo.Q8_0.gguf"
+    ],
+    "sha256": "f0ca0959f2621b1b6c0364b4f67a6e4e7ed48da2fd6e20298a28967475a41083"
   }
 ]
